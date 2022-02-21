@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly
+    xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+    <id>pkg</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+
+   	<includeBaseDirectory>false</includeBaseDirectory>
+    
+    <fileSets>
+    	<!-- Nota: sostituiamo solo alcuni files per ridurre l'overhead: inutile processare troppi files comunque non parametrizzati -->
+        <fileSet>
+            <directory>app/dist/</directory>
+            <outputDirectory>/</outputDirectory>
+            <excludes>
+            	<exclude>**/index.html</exclude>
+            	<exclude>**/config.js</exclude>
+            	<exclude>**/sidebar.directive.js</exclude>
+            	<exclude>**/ib.js</exclude>
+            	<exclude>**/font.css</exclude>
+            	<exclude>**/google-fonts.css</exclude>
+            </excludes>
+        </fileSet>
+
+        <fileSet>
+            <directory>app/dist/</directory>
+            <outputDirectory>/</outputDirectory>
+            <filtered>true</filtered>
+            <includes>
+            	<include>**/index.html</include>
+            	<include>**/config.js</include>
+            	<include>**/ib.js</include>
+            	<include>**/sidebar.directive.js</include>
+            	<include>**/font.css</include>
+            	<include>**/google-fonts.css</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
