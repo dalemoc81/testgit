@@ -6,7 +6,7 @@
 	<groupId>it.bpp.erasmus</groupId>
 	<artifactId>erasmus-client</artifactId>
 	<version>1.0.0</version>
-	<packaging>pom</packaging>
+	<packaging>pomello</packaging>
 
 	<name>ERASMUS :: Angular frontend module</name>
 
